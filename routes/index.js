@@ -1,9 +1,15 @@
-const express = require('express');
-const router  = express.Router();
+const router = require('express').Router()
+//const upload = require('../config/cloudinary')
+const { catchErrors } = require('../middlewares/catchErrors')
+const { isLoggedIn, isActive } = require('../middlewares/auth')
 
-/* GET home page */
-router.get('/', (req, res, next) => {
-  res.render('index');
-});
 
+
+const {
+  //Nombres de las vistas
+
+} = require('../controllers/index.controller')
+ //Router.get.port de las vistas
+
+//router.get('/logout', logout)
 module.exports = router;
