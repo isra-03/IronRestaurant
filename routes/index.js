@@ -8,9 +8,11 @@ const { isLoggedIn, isActive } = require('../middlewares/auth')
 const {
   //Nombres de las vistas
   indexGet,
+  signupPost
 
-} = require('../controllers/index.controller')
+} = require('../controllers')
 router.get('/', indexGet)
+.post("/signup",signupPost)
  //Router.get.port de las vistas
 
 //router.get('/logout', logout)
