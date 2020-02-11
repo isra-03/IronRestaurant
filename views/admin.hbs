@@ -1,0 +1,33 @@
+<body>
+  <div class=" col s12">
+    <nav class="blue">
+      <div class="nav-wrapper">
+        <a class="brand-logo">Iron-Restaurant </a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li><a href="/menu"> Menu</a></li>
+          <li><a href="/empleados">Empleados</a></li>
+          <li><a href="/statuspedido">Ordenes</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+  <div class="colums ">
+  <div class="col s12 m6">
+    <div class="card blue-grey darken-1">
+      <div class="card-content white-text">
+        <span>
+          <h4>User name</h4> <i class="large material-icons">face</i>
+          <h4>Status</h4> <i class="large material-icons">query_builder</i>
+        </span>
+
+        {{ #each status}}
+        <span>
+          <p> {{ this.usernamer }}</p>
+          <p> {{ this.status }}</p>
+        </span>
+        {{/each}}
+      </div>
+    </div>
+  </div>
+</div>
+</body>

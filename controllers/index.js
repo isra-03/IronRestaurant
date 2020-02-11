@@ -25,14 +25,15 @@ exports.signupPost = async (req,res,next) => {
 
       let user = await User.register({ username, email, confirmationCode:token}, password)
       let endpoint=`http://localhost:3000/confirm/${token}`
-      await confirmAccount(email,
-      endpoint
-    )
+      await confirmAccount(email,endpoint)
   console.log("manda correo")
   res.redirect("/")
 }
+exports.menu = (req, res, next) => res.render('menu')
 
 exports.loginGet=(req,res,next) => res.render("/login")
+
+
 
 
 

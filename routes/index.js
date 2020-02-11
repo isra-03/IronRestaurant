@@ -8,9 +8,9 @@ const { isLoggedIn, isActive } = require('../middlewares/auth')
 const {
   //Nombres de las vistas
   indexGet,
-
   signupGet,
-  signupPost
+  signupPost,
+  menu
 
 } = require('../controllers')
 router.get('/', indexGet)
@@ -21,4 +21,9 @@ router.post("/signup",signupPost)
  //Router.get.port de las vistas
 
 //router.get('/logout', logout)
+
+router.post('/menu' , menu)
+
 module.exports = router;
+
+

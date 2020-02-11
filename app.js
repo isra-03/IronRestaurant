@@ -57,7 +57,7 @@ app.use(require('node-sass-middleware')({
 
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, '/public')));
 app.use(favicon(path.join(__dirname, 'public', 'images', 'favicon.ico')));
 
 
@@ -69,8 +69,10 @@ app.locals.title = 'Express - Generated with IronGenerator';
 
 const index = require('./routes/index');
 app.use('/', index);
+
 app.use('/signup', require('./routes/index'))
 
+app.use('/menu', require('./routes/index'))
 
 
 module.exports = app;
