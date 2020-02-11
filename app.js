@@ -11,9 +11,9 @@ const path         = require('path');
 const passport = require("./config/passport");
 const session = require("express-session");
 
-
+  
 mongoose
-  .connect('mongodb://localhost/ironrestaurant', {useNewUrlParser: true})
+  .connect('mongodb://localhost/ironrestaurant', {useNewUrlParser: true,  useUnifiedTopology: true })
   .then(x => {
     console.log(`Connected to Mongo! Database name: "${x.connections[0].name}"`)
   })
