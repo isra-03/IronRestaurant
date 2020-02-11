@@ -1,25 +1,36 @@
-<h1>{{title}}</h1>
-<p>Welcome to {{title}}</p>
+<title>IronRestaurant</title>
+<body>
+<div id ="imagen-fondo"class="contenedor-imagen responsive-img col s12">
+    <form class="col s12 " method="post">
+        <div class='row'>
+          <div class='col s12'>
+          </div>
+        </div>
+        <h2 class="black-text ">Welcome</h5>
+        <h3 class="black-text ">Login</h3>
+        <div class='row login'>
+          <div class='input-field col s12'>
+            <input class=' black-text' type='email' name='email' id='email' required />
+            <label class="black-text" for='email'>Enter your email</label>
+          </div>
+        </div>
 
-<section class="home__container">
-  <form action="/signup" method="POST">
-    <h2>Sign up</h2>
-    <label>Name</label>
-    <input type="text" name="name" placeholder="Kanye" required>
-    <label>Email</label>
-    <input type="email" name="newemail" placeholder="kanye@west.com" required>
-    <label>Password</label>
-    <input type="password" name="newpassword" required>
-    <input type="submit" value="Signup">
-    <p class="msg">{{msg}}</p>
-    <p class="err">{{err}}</p>
-  </form>
-  <form action="/login" method="POST">
-    <h2>Log in</h2>
-    <label>Email</label>
-    <input type="email" name="email" placeholder="kanye@west.com" required>
-    <label>Password</label>
-    <input type="password" name="password" required>
-    <input type="submit" value="Login">
-  </form>
-</section>
+        <div class='row login'>
+          <div class='input-field col s12'>
+            <input class='' type='password' name='password' id='password'required />
+            <label class="black-text" for='password' >Password</label>
+          </div>
+        </div>
+
+        <br />
+        <center>
+          <div class='row login'>
+            <button type="submit" value="Login" name='btn_login' class='col s12 btn btn-large waves-effect indigo'>Ingresar</button>
+          </div>
+          <a class="red-text" href="/signup">Create account</a>
+        </center>
+        
+      </form>
+</div>
+       
+</body>

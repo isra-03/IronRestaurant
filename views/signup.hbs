@@ -1,39 +1,40 @@
 <body >
 <div id ="imagen-fondo"class="contenedor-imagen responsive-img col s12">
-    <form class="col s12 " method="post">
+    <form class="col s12 " method="POST">
         <div class='row'>
           <div class='col s12'>
           </div>
         </div>
         <h3 class="black-text "> -- Registrate --</h5>
-        <div class='row login'>
+       
+         <div class='row login'>
           <div class='input-field col s12'>
-            <input class='validate black-text' type='email' name='email' id='email'required />
-            <label class="black-text" for='email'>Enter your email</label>
+            <input class='black-text' type='text' name='name' required />
+            <label class="black-text">Name</label>
           </div>
         </div>
 
         <div class='row login'>
           <div class='input-field col s12'>
-            <input class='validate' type='password' name='password' id='password'required />
-            <label class="black-text" for='password'>Password</label>
+            <input class=' black-text' type='email' name='newemail' id='email'required />
+            <label class="black-text">Enter your email</label>
           </div>
         </div>
 
-
         <div class='row login'>
-            <div class='input-field col s12'>
-              <input class='validate' type='password' name='password-verificate' id='password-verifivate' required/>
-              <label class="black-text" for='password'>Repeat Password</label>
-            </div>
+          <div class='input-field col s12'>
+            <input type='password' name='newpassword' id='password'required />
+            <label class="black-text" >Password</label>
           </div>
+        </div>
+
         <center>
           <div class='row login'>
-            <button type='submit' name='login' class='col s12 btn btn-large waves-effect indigo'>Create</button>
+            <button type='submit' name='Signup' class='col s12 btn btn-large waves-effect indigo'>Create</button>
+            <p class="msg">{{msg}}</p>
+            <p class="err">{{err}}</p>
           </div>
-          
-        </center>
-        
+        </center> 
       </form>
 </div>
 </body>

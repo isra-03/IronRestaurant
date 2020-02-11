@@ -18,6 +18,7 @@ for (let i = 0; i < 25; i++) {
   token += characters[Math.floor(Math.random() * characters.length )];
 }
 exports.signupGet = (req, res, next) => res.render('signup')
+
 exports.signupPost = async (req,res,next) => {
   console.log("entra")
   const { name:username,newemail:email, newpassword:password } = req.body
