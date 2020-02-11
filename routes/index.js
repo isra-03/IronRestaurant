@@ -1,5 +1,5 @@
 const router = require('express').Router()
-//const upload = require('../config/cloudinary')
+const upload = require('../config/cloudinary')
 const { catchErrors } = require('../middlewares/catchErrors')
 const { isLoggedIn, isActive } = require('../middlewares/auth')
 
