@@ -1,8 +1,60 @@
 body {
-  padding: 50px;
+  padding: 0;
+  margin: 0;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+
 }
 
 a {
   color: #00B7FF;
+}
+
+
+.contenedor-imagen{
+  width: 100%;
+  height: 200%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url('https://img.freepik.com/vector-gratis/fondo-madera-realista_107791-102.jpg?size=626&ext=jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+.contenedor-imagen-menu{
+  width: 100%;
+  height: 200%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+
+  background-image: url('https://img.freepik.com/vector-gratis/fondo-madera-realista_107791-102.jpg?size=626&ext=jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+form{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.login{
+  width: 50vw;
+
+}
+
+
+.logo {
+  display: inline-block;
+  height: 100%;
+}
+
+.logo>img {
+  vertical-align: middle
 }

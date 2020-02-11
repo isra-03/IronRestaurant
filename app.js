@@ -12,14 +12,14 @@ const passport = require("./config/passport");
 const session = require("express-session");
 
   
-mongoose.connect(process.env.DB, {useNewUrlParser: true})
+mongoose.connect('mongodb://localhost/ironrestaurant', {useNewUrlParser: true,  useUnifiedTopology: true})
   .then(x => {
     console.log(`Connected to Mongo! Database name: "${x.connections[0].name}"`)
   })
   .catch(err => {
     console.error('Error connecting to mongo', err)
   });
-
+mongoose.set('useCreateIndex', true);
 const app_name = require('./package.json').name;
 const debug = require('debug')(`${app_name}:${path.basename(__filename).split('.')[0]}`);
 
@@ -69,6 +69,7 @@ app.locals.title = 'Express - Generated with IronGenerator';
 
 const index = require('./routes/index');
 app.use('/', index);
+app.use('/admin',require("./routes/adminRoutes"))
 
 
 module.exports = app;
