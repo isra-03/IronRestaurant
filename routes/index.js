@@ -1,5 +1,4 @@
 const router = require('express').Router()
-
 const { catchErrors } = require('../middlewares/catchErrors')
 const { isLoggedIn, isActive } = require('../middlewares/auth')
 const  passport=require("../config/passport")
@@ -26,3 +25,5 @@ router.get('/', indexGet)
 
 router.get('/logout', logout)
 module.exports = router;
+
+
