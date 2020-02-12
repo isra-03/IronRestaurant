@@ -23,9 +23,10 @@ exports.signupPost = async (req,res,next) => {
   const { name:username,newemail:email, newpassword:password } = req.body
 
       let user = await User.register({ username, email, confirmationCode:token}, password)
-      let endpoint=`http://localhost:3000/confirm/${token}`
-      await confirmAccount(email,endpoint)
-  console.log("manda correo")
+      let endpoint=`http://localhost:3000/confirmation/${token}`
+      await confirmAccount(email,
+      endpoint
+    )
   res.redirect("/")
 }
 exports.menu = (req, res, next) => res.render('menu')
@@ -43,4 +44,3 @@ exports.loginPost=(req,res)=>{
 exports.adminGet=(req,res)=>{
   res.render("admin")
 }
-

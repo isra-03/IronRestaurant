@@ -1,14 +1,9 @@
 const router = require('express').Router()
-<<<<<<< HEAD
-//const upload = require('../config/cloudinary')
-=======
-
->>>>>>> 8cdfb332eb7104f7a2c1342f3703491f75b0a06b
 const { catchErrors } = require('../middlewares/catchErrors')
 const { isLoggedIn, isActive } = require('../middlewares/auth')
 const  passport=require("../config/passport")
 
-const{
+const {
   //Nombres de las vistas
   indexGet,
   signupPost,
@@ -30,5 +25,3 @@ router.get('/', indexGet)
 
 router.get('/logout', logout)
 module.exports = router;
-
-
