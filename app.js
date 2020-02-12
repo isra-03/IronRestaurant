@@ -13,7 +13,7 @@ const session = require("express-session");
 
 
 mongoose
-  .connect(process.env.DB, {useNewUrlParser: true})
+  .connect(process.env.DB, {useNewUrlParser: true, useUnifiedTopology: true })
   .then(x => {
     console.log(`Connected to Mongo! Database name: "${x.connections[0].name}"`)
   })
@@ -70,6 +70,7 @@ app.locals.title = 'Express - Generated with IronGenerator';
 
 const index = require('./routes/index');
 app.use('/', index);
+app.use('/', require('./routes/adminRoutes'));
 
 
 module.exports = app;
