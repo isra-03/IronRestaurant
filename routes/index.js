@@ -5,7 +5,7 @@ const { isLoggedIn, isActive } = require('../middlewares/auth')
 
 
 
-const {
+const{
   //Nombres de las vistas
   indexGet,
   signupGet,
@@ -22,7 +22,7 @@ router.post("/signup",signupPost)
 
 //router.get('/logout', logout)
 
-router.post('/menu' , menu)
+router.get('/menu' , menu)
 
 module.exports = router;
 
