@@ -7,7 +7,7 @@ const platilloSchema = new Schema(
     },
     descripcion: {
       type: String,
-      required: true
+      //required: true
     },
     costo: {
       type: Number
@@ -22,7 +22,4 @@ const platilloSchema = new Schema(
   );
   
   
-  module.exports = model("Platillos", platilloSchema);
-  
-
- 
+  module.exports = model("Plate", userSchema);

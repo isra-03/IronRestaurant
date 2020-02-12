@@ -4,7 +4,7 @@ const {confirmAccount}=require("../config/nodemailer")
 
 exports.indexGet = (req, res, next) => res.render('index')
 //index, index admin, inventario, menu, statuspedido
-//exorts Get Post
+//exports Get Post
 
 
 exports.logout = (req, res, next) => {
@@ -20,7 +20,6 @@ for (let i = 0; i < 25; i++) {
 exports.signupGet = (req, res, next) => res.render('signup')
 
 exports.signupPost = async (req,res,next) => {
-  console.log("entra")
   const { name:username,newemail:email, newpassword:password } = req.body
 
       let user = await User.register({ username, email, confirmationCode:token}, password)
@@ -31,24 +30,17 @@ exports.signupPost = async (req,res,next) => {
 }
 exports.menu = (req, res, next) => res.render('menu')
 
-exports.loginGet=(req,res,next) => res.render("/login")
-
-
-
-
-
 exports.confirmGet = async ( req, res, next)=> {
   const {confirmationCode} = req.params
-  const user = await User.findOneAndUpdate({confirmationCode}, { status: "Active"}, {new: true})
-  res.redirect('/confirmation')
+  await User.findOneAndUpdate({confirmationCode}, { status: "Active"}, {new: true})
+  res.render('confirmation')
 }
 
-exports.confirmPageGet=(req,res,next)=>{
-  res.render("/confirmation")
+exports.loginPost=(req,res)=>{
+  res.redirect("/admin")
 }
 
-exports.profileGet = (req, res, next) => {
-  const { user } = req
-  console.log("login",req.user)
-  res.render('/menu', user)
+exports.adminGet=(req,res)=>{
+  res.render("admin")
 }
+

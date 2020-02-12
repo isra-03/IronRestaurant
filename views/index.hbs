@@ -15,51 +15,16 @@
           </div>
         </div>
 
-        <div class='row login'>
-          <div class='input-field col s12'>
-            <input class='' type='password' name='password' required />
-            <label class="black-text" for='password' >Password</label>
-          </div>
-        </div>
 
-        <br />
-        <center>
-          <div class='row login'>
-            <button type="submit" value="Login" class='col s12 btn btn-large waves-effect indigo' >Login</button>
-          </div>
-          <a class="red-text" href="/signup">Create account</a>
-        </center>
-        
-      </form>
-</div>
-       
-</body>
-{{!-- 
-<div class="container">
-  <div class="row">
-    <br>
-    <a href="/platillo/nuevo" class="">Nuevo</a>
+  <form action="/login" method="POST">
+    <h2>Log in</h2>
+    <label>Email</label>
+    <input type="email" name="email" placeholder="correo@dominio0.com" required>
+    <label>Password</label>
+    <input type="password" name="password" required>
+    <input type="submit" value="Login">
+  </form>
 
-      <table>
-        <thead>
-          <tr>
-            <th>Nombres</th>
-            <th>Descripciones</th>
-            <th>Costo</th>
-            <th colspan="2"> Operacion</th>
-          </tr>
-        </thead>
+  <a href="/signup">Crear cuenta</a>
 
-          {{#each platillos}}
-            <tr>
-              <td>{{ this.nombres }}</td>
-              <td>{{ this.descripciones }}</td>
-              <td>{{ this.costo }}</td>
-              <td> <a href="/platillo/modificar/{{this._id}} ">Modificar</a> </td>
-              <td> <a href="/platillo/eliminar/{{this._id}}"></a>Eliminar</td>
-            </tr>
-          {{/each}}
-
-      </table>
-  </div>
-</div> --}}
+</section>

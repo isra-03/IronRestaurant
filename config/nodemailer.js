@@ -19,7 +19,7 @@ exports.confirmAccount = async (to, endpoint) => {
   return await transporter.sendMail({
     from:'Restauran',
     to,
-    subject: `confirma tu cuenta`,
+    subject: `Confirma tu cuenta`,
     html: correo({endpoint})
   })
 }
