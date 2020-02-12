@@ -9,7 +9,12 @@ a {
   color: #00B7FF;
 }
 
-
+.form-inventario{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
 .contenedor-imagen{
   width: 100%;
   height: 200%;
@@ -21,7 +26,18 @@ a {
   background-size: cover;
 }
 
-
+.contenedor-inventario{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  background-image: url('https://d2skenm2jauoc1.cloudfront.net/assets/gloriafood/img/redesign/mobile-only/homepage-hero-mobile-33cfa67eb9.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 .contenedor-imagen-menu{
   width: 100%;
   height: 200%;
@@ -35,9 +51,18 @@ a {
   background-size: cover;
 }
 
-form{
+#form-index{
   width: 100vw;
   height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#inventario{
+  //width: 100vw;
+  //height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;

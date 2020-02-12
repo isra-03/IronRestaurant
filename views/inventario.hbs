@@ -1,22 +1,48 @@
+<body>
+<div class="row s4">
 
-<div>
-  <div id="surtir">
-    <form action="/aumentarInventario" method="POST">
-    <input type="text" name="nombre">
-    <button>Surtir</button>
-    </form>
+
+  <div class="contenedor-inventario responsive-img ">
+
+    <div id="surtir">
+      <form action="/aumentarInventario" method="POST" id="inventario">
+        <h3 class="black-text"> Inventario </h3>
+
+        <input type="text" name="nombre" class="black-text" placeholder="stocks">
+        <button class="center-align orange accent-4 btn waves-effect waves-light">Surtir <i
+            class="material-icons right">room_service</i> </button>
+
+      </form>
+
+
+      <div id="crear">
+        <form action="/crearPlatillo" method="POST" id="inventario">
+          <h3 class="black-text"> Crear Platillo </h3>
+          <input type="text" name="nombre" placeholder="Nombre">
+          <input type="text" name="descripcion" placeholder="Descripcion">
+          <input type="number" name="costo" placeholder="Costo">
+          <p>foto</p>
+          <input type="number" name="cantidad" placeholder="Cantidad" max="40" min="5">
+          <button type="submit"  class="orange accent-4 btn waves-effect waves-light">Crear <i
+              class="material-icons right">room_service</i> </button>
+        </form>
+      </div>
+
+    </div>
+
+
+    <div id="eliminar">
+      <form action="/crearPlatillo" method="POST" id="inventario">
+        <h3 class="black-text"> Eliminar platillo </h3>
+        <input type="text" name="nombre" placeholder="Nombre">
+        <button class="orange accent-4 btn waves-effect waves-light">Eliminar<i class="material-icons right">close</i>
+        </button>
+      </form>
+    </div>
+
+
   </div>
-  <div id="crear">
-    <form action="/crearPlatillo" method="POST">
-      <input type="text" name="nombre" placeholder="Nombre">
-      <input type="text" name="descripcion" placeholder="Descripcion">
-      <input type="number" name="costo" placeholder="Costo">
-      <p>foto</p>
-      <input type="number" name="cantidad" placeholder="Cantidad">
-      <button>Crear</button>
-    </form>
-  </div>
-  <div id="eliminar"> 
-    
-  </div>
+
 </div>
+
+</body>
