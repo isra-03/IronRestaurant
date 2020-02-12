@@ -15,7 +15,7 @@ const userSchema = new Schema(
     photo: {
       type: String,
       default:
-        "https://f0.pngfuel.com/png/668/559/black-and-white-round-logo-cafe-shanghai-cuisine-restaurant-menu-delicacies-png-clip-art.png"
+        "../public/images/defaultPlatillo.jpg"
     },
     cantidad: { type: Number, min: 5, max: 40, required: true }
   }
