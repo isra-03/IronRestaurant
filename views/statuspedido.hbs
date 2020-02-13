@@ -1,0 +1,38 @@
+<h1>Estatus Ordenes</h1>
+
+
+  <div class="contenedor-imagen-menu responsive-img col s12">
+    <div class="row">
+      {{#each ordenes}}
+      <div class="column">
+        <div class="col s12 m6">
+          <div class="card medium">
+            <div class="card-image">
+              <img
+                src="{{photo}}" alt="{{nombre}}">
+              <span class="card-title green-text  .textUpCard">{{nombre}}</span>
+            </div>
+            <div class="card-content">
+              <p>{{idMesero}}</p>
+              <p>Mesero: {{idPlatillo}}</p>
+              <p>Mesa: {{mesa}}</p>
+              <p>Cantidad: {{cantidad}}</p>
+            </div>
+            <div class="input-field col s12">
+            <select multiple>
+              <option value="" disabled selected>Selecciona el Estatus</option>
+              <option value="1">Pendiente</option>
+              <option value="2">Terminado</option>
+              </select>
+            <label>Estatus de orden</label>
+            </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      {{/each}}
+    </div>
+  </div>
+  <div>
+    

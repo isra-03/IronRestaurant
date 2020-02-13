@@ -11,7 +11,9 @@ const {
   confirmGet,
   logout,
   loginPost,
-  adminGet
+  adminGet,
+  //statusGet
+
 } = require('../controllers')
 
 
@@ -21,6 +23,7 @@ router.get('/', indexGet)
 .get("/confirmation/:confirmationCode",confirmGet)
 .post("/login",passport.authenticate('local'),loginPost)
 .get("/admin",adminGet)
+//.get("/statuspedido",statusGet)
  //Router.get.port de las vistas
 
 router.get('/logout', logout)
