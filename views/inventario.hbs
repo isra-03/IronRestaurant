@@ -1,8 +1,20 @@
 <body>
-<div class="row s4">
+<nav class="blue">
+      <div class="nav-wrapper">
+        <a class="brand-logo">Iron-Restaurant </a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li><a href="/menu"> Ir a Menu</a></li>
+          <li><a href="/admin"> Ir a Admin</a></li>
+          <li><a href="/inventario">Crear un Platillo</a></li>
+          <li><a href="/statuspedido">Ordenes</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>  
+<div  id ="inventario-margen" class="row s4">
 
 
-  <div class="contenedor-inventario responsive-img ">
+ <div class="contenedor-inventario responsive-img ">
 
     <div id="surtir">
       <form action="/aumentarInventario" method="POST" id="inventario">
@@ -32,17 +44,10 @@
 
 
     <div id="eliminar">
-      <form action="/crearPlatillo" method="POST" id="inventario">
+      <form action="/borraPlatillo" method="POST" id="inventario">
         <h3 class="black-text"> Eliminar platillo </h3>
         <input type="text" name="nombre" placeholder="Nombre">
-        <button class="orange accent-4 btn waves-effect waves-light">Eliminar<i class="material-icons right">close</i>
+        <button type="submit" class="orange accent-4 btn waves-effect waves-light">Eliminar<i class="material-icons right">close</i>
         </button>
       </form>
     </div>
-
-
-  </div>
-
-</div>
-
-</body>
