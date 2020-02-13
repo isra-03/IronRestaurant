@@ -2,6 +2,9 @@ body {
   padding: 0;
   margin: 0;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  
+    background: rgba($color: #ff692e, $alpha: 0.5);
+
 
 }
 
@@ -50,6 +53,64 @@ a {
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+.contenedor-imagen-menu-inventario{
+  width: 100%;
+  //height: 200%;
+  display: flex;
+  align-items: center;
+  justify-content: s;
+  flex-wrap: wrap;
+
+  background-image: url('https://img.freepik.com/vector-gratis/fondo-madera-realista_107791-102.jpg?size=626&ext=jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+
+
+.contenedor-imagen-menu-comida{
+  width: 100%;
+  height: 200%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+
+  background-image: url('https://aviburger.com/wp-content/uploads/2019/02/AVI2.01-sin-fondo-min.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.contenedor-imagen-menu-comida-2{
+  width: 100%;
+  height: 200%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  background: rgba($color: #ff692e, $alpha: 0.0);
+  //background-image: url('https://aviburger.com/wp-content/uploads/2019/02/AVI2.01-sin-fondo-min.png');
+  //background-repeat: no-repeat;
+  //background-size: cover;
+}
+
+.menu-color{
+  background: rgba($color: #ff692e, $alpha: 0.5);
+}
+
+.pendiente{
+  background: rgba($color: #ff2020, $alpha: 0.5);
+}
+.entregado{
+  background: rgba($color: #21e61a, $alpha: 0.5);
+}
+.encamino{
+  background: rgba($color: #f8f41a, $alpha: 0.5);
+}
+
+
 #inventario-margen{
   width: 100%;
   height: 100%;

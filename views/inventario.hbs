@@ -1,69 +1,108 @@
-<div>
-  <table>
-    <thead>
-      <tr>
+  <nav>
+    <div class="nav-wrapper deep-orange darken-1">
+      <a href="/" class="brand-logo center"><img width="100px" src="/images/logo.png" alt="logo"></a>
+      <ul id="nav-mobile" class="left hide-on-med-and-down">
+        <li><a href="/menu">Menu</a></li>
+        <li> <a href="/admin"> Perfil admin </a> </li>
+        <li><a href="/inventario">Inventario</a></li>
+        <li><a href="/statuspedido">Estatus</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="black-text contenedor-imagen-menu-inventario responsive-img col s6 m6 l12">
+
+    <table class="centered  highlight  responsive-table">
+
+      <thead>
+        <tr>
           <th>Nombre</th>
           <th>Cantidad</th>
           <th>Costo</th>
-      </tr>
-    </thead>
-    <tbody>
-      {{#each platos}}
+        </tr>
+      </thead>
+      <tbody>
+        {{#each platos}}
         <tr>
           <td>{{nombre}}</td>
           <td>{{cantidad}}/40</td>
           <td>${{costo}}</td>
         </tr>
-      {{/each}}   
-    </tbody>
-  </table>
-  
-</div>
-
-<div>
-  <div id="surtir">
-    <form action="/aumentarInventario" method="POST">
-    <div class="input-field col s12">
-      <select class="browser-default" name="platillo" >
-        <option value="">Selecciona un platillo</option>
-        {{#each platos}}
-          <option value="{{_id}}">{{nombre}}</option>
         {{/each}}
-      </select>
-      </div>
-     <input type="number" name="extra" placeholder="Cantidad">
-     <button class="btn waves-effect waves-light deep-orange darken-1" type="submit" name="action">Surtir
-    <i class="material-icons right">send</i>
-  </button>
-    </form>
-  </div>
-  <div id="crear">
-    <form action="/crearPlatillo" method="POST">
-      <input type="text" name="nombre" placeholder="Nombre">
-      <input type="text" name="descripcion" placeholder="Descripcion">
-      <input type="number" name="costo" placeholder="Costo">
-      <p>foto</p>
-      <input type="number" name="cantidad" placeholder="Cantidad">
-      <button class="btn waves-effect waves-light deep-orange darken-1" type="submit" name="action">Crear Platillo
-    <i class="material-icons right">add_circle_outline</i>
-  </button>
-    </form>
-  </div>
+      </tbody>
 
-  <div id="eliminar"> 
-    <form action="/borrarPlatillo" method="POST">
-      <div class="input-field col s12">
-      <select class="browser-default" name="platilloBorra" >
-        <option value="">Selecciona un platillo</option>
-        {{#each platos}}
-          <option value="{{_id}}">{{nombre}}</option>
-        {{/each}}
-      </select>
-      </div>
-           <button class="btn waves-effect waves-light deep-orange darken-1" type="submit" name="action">Borrar Platillo
-    <i class="material-icons right">highlight_off</i>
-  </button>
-     </form>
-  </div>
-</div>
+    </table>
 
+
+    <div class='row login centered'>
+
+      <div id="surtir" class='input-field col s12'>
+        <h3 class="centered ">Resurtir menu </h3>
+        <form action="/aumentarInventario" method="POST">
+          <div class="input-field col s12">
+            <select class="browser-default" name="platillo">
+              <option value="">Selecciona un platillo</option>
+              {{#each platos}}
+              <option value="{{_id}}">{{nombre}}</option>
+              {{/each}}
+            </select>
+          </div>
+          <div class='input-field col s12'>
+          <input type="number" name="extra" placeholder="Cantidad">
+          <label class="black-text">Cantidad</label>
+          </div>
+          <button class="btn waves-effect waves-light deep-orange darken-1" type="submit" name="action">Surtir
+            <i class="material-icons right">send</i>
+          </button>
+        </form>
+      </div>
+
+
+      <div id="crear" class='input-field col s12'>
+        <h3 class="centered ">Crear </h3>
+        <form action="/crearPlatillo" method="POST">
+          <div class='input-field col s12'>
+            <input type="text" name="nombre" placeholder="Nombre">
+            <label class="black-text">Nombre del Platillo</label>
+          </div>
+          <div class='input-field col s12'>
+            <input type="text" name="descripcion" placeholder="Descripcion">
+            <label class="black-text">Descripcion</label>
+          </div>
+          <div class='input-field col s12'>
+            <input type="number" name="costo" placeholder="Costo">
+            <label class="black-text">Precio</label>
+          </div>
+          <div class='input-field col s12'>
+            <input type="number" name="cantidad" placeholder="Cantidad">
+            <label class="black-text">Cantidad </label>
+          </div>
+          <button class="btn waves-effect waves-light deep-orange darken-1" type="submit" name="action">Crear Platillo
+            <i class="material-icons right">add_circle_outline</i>
+          </button>
+        </form>
+      </div>
+
+
+
+      <div id="eliminar" class='centered input-field col s12'>
+        <h4>Eliminar</h4>
+        <form action="/borrarPlatillo" method="POST">
+          <div class="input-field ">
+            <select class="browser-default col s12" name="platilloBorra">
+              <option value="">Selecciona un platillo</option>
+              {{#each platos}}
+              <option value="{{_id}}">{{nombre}}</option>
+              {{/each}}
+            </select>
+            <p></p>
+          </div>
+          <button class="btn waves-effect waves-light deep-orange darken-1" type="submit" name="action">Borrar Platillo
+            <i class="material-icons right">highlight_off</i>
+          </button>
+
+        </form>
+      </div>
+    </div>
+
+  </div>

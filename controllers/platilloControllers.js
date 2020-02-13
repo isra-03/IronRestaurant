@@ -17,11 +17,8 @@ exports.creaPlatillo=async (req,res)=>{
   }
 
 
-  exports.getAllPlatillos=async (req,res)=>{    //llamar todos los platillos
+exports.getAllPlatillos=async (req,res)=>{    //llamar todos los platillos
     const data= await Platillos.find()
     res.render("menu",{data})
     
-    }
-
-
-exports.    
+  }

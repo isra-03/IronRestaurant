@@ -1,23 +1,80 @@
-<h1>Menu</h1>
 
-  <div class="contenedor-imagen-menu responsive-img col s12">
-    <div class="row">
+  <nav>
+
+    <div class="nav-wrapper deep-orange darken-1   col s12 m12 l12">
+      <a href="/" class="brand-logo center"><img width="100px" src="/images/logo.png" alt="logo"></a>
+      <ul class="left hide-on-med-and-down sidenav sidenav-fixed" id="slide-out" >
+        <li class=""><a href="/menu">Menu</a></li>
+        <li> <a href="/admin"> Perfil Admin </a> </li>
+        <li class=""><a href="/inventario">Inventario</a></li>
+        <li class=""><a href="/statuspedido">Estatus</a></li>
+      </ul>
+    </div>
+
+  </nav> 
+
+
+ <div class="contenedor-imagen-menu-comida responsive-img col s12 m1">
+ 
+ <form id="form-index" action="/crearOrden" method="POST">
+    <h3>Ingresa una orden</h3>
+    
+    <div class="input-field col s12">
+      <select class="browser-default" name="platillo" >
+        <option value="">Selecciona un platillo</option>
+        {{#each data}}
+
+          <option value="{{_id}}">{{nombre}}</option>
+          
+        {{/each}}
+      </select>
+    </div>
+
+    <div class='row login'>
+    <div class='input-field col s12'>
+      
+
+        <div class='row login'>
+          <div class='input-field col s12'>
+            <input type="number" name="cantidad" placeholder="#-cantidad" min="1" min="39">
+            <label class="black-text" >Porciones </label>
+          </div>
+        </div>
+
+
+        <div class='row login'>
+          <div class='input-field col s12'>
+            <input type="number" name="mesa" placeholder="No. mesa" min="1" max="15">
+            <label class="black-text" > Mesa </label>
+          </div>
+        </div>
+
+    </div>
+    </div>
+
+    <a class="deep-orange darken-1 waves-effect waves-light btn-large">Ordenar</a>
+</form>
+
+</div>
+
+  <div class="contenedor menu-color">
+    <div class="row ">
       {{#each data as  |platillo|}}
-      <div class="column">
+      <div class="column ">
         <div class="col s12 m6">
           <div class="card medium">
             <div class="card-image">
-              <img
+              <img class="responsive-img"
                 src="{{photo}}" alt="{{nombre}}">
               <span class="card-title black-text">{{nombre}}</span>
             </div>
             <div class="card-content">
               <p>{{descripcion}}</p>
-              <p>Costo: {{costo}}</p>
-              <p>Cantidad: {{cantidad}}</p>
+              
             </div>
             <div class="card-action">
-              <a href="#">This is a link</a>
+              <p>Costo: {{costo}}</p>
+              <p>Cantidad: {{cantidad}}</p>
             </div>
           </div>
         </div>
@@ -25,19 +82,6 @@
       {{/each}}
     </div>
   </div>
-  <div>
-    <form action="/crearOrden" method="POST">
-    <h3>Ingresa una orden</h3>
-    <div class="input-field col s12">
-      <select class="browser-default" name="platillo" >
-        <option value="">Selecciona un platillo</option>
-        {{#each data}}
-          <option value="{{_id}}">{{nombre}}</option>
-        {{/each}}
-      </select>
-    </div>
-    <input type="number" name="cantidad" placeholder="#-cantidad">
-    <input type="number" name="mesa" placeholder="No. mesa">
-    <button>Ordenar</button>
-    </form>
-  </div>
+
+
+
