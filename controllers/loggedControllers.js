@@ -5,10 +5,11 @@ exports.creaOrden=async (req,res)=>{
   const {platillo,mesa,cantidad}=req.body
   const user= req.user
   await Ordenes.create({idPlatillo:platillo,idMesero:user._id,cantidad,mesa})
-  res.redirect("statuspedido")
+  res.redirect("/statuspedido")
   }
 
-exports.creaOrden=async (req,res) => {
-const ordenesStatus=await Ordenes.find().populate({User})
+exports.statusOrden=async (req,res) => {
+const ordenesStatus=await Ordenes.find().populate("idMesero").populate("idPlatillo")
+console.log(ordenesStatus)
 res.render("statuspedido",{ordenesStatus})
 }
