@@ -12,6 +12,10 @@ a {
   color: #00B7FF;
 }
 
+.color-nav{
+  background: #ec1c24;
+}
+
 .form-inventario{
   display: flex;
   align-items: center;
@@ -61,8 +65,8 @@ a {
   align-items: center;
   justify-content: s;
   flex-wrap: wrap;
-
-  background-image: url('https://img.freepik.com/vector-gratis/fondo-madera-realista_107791-102.jpg?size=626&ext=jpg');
+  background:#FCF0F2 ;
+  //background-image: url('https://img.freepik.com/vector-gratis/fondo-madera-realista_107791-102.jpg?size=626&ext=jpg');
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -78,7 +82,7 @@ a {
   justify-content: space-around;
   flex-wrap: wrap;
 
-  background-image: url('https://aviburger.com/wp-content/uploads/2019/02/AVI2.01-sin-fondo-min.png');
+  //background-image: url('https://aviburger.com/wp-content/uploads/2019/02/AVI2.01-sin-fondo-min.png');
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -90,14 +94,16 @@ a {
   align-items: center;
   justify-content: space-around;
   flex-wrap: wrap;
-  background: rgba($color: #ff692e, $alpha: 0.0);
+  background: 	#FCF0F2;
+  //background: rgba($color: #ff692e, $alpha: 0.0);
   //background-image: url('https://aviburger.com/wp-content/uploads/2019/02/AVI2.01-sin-fondo-min.png');
   //background-repeat: no-repeat;
   //background-size: cover;
 }
 
 .menu-color{
-  background: rgba($color: #ff692e, $alpha: 0.5);
+  //background: rgba($color: #ff692e, $alpha: 0.5);
+  background: 	#FCF0F2;
 }
 
 .pendiente{
@@ -110,6 +116,14 @@ a {
   background: rgba($color: #f8f41a, $alpha: 0.5);
 }
 
+.lista-inventario{
+  background: rgba($color: #ff692e, $alpha: 0.8);
+}
+
+.lista-inventario-2{
+
+  background: rgba($color: #ff692e, $alpha: 0.5);
+}
 
 #inventario-margen{
   width: 100%;

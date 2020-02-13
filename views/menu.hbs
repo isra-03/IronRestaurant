@@ -1,7 +1,7 @@
 
   <nav>
 
-    <div class="nav-wrapper deep-orange darken-1   col s12 m12 l12">
+    <div class="nav-wrapper color-nav   col s12 m12 l12">
       <a href="/" class="brand-logo center"><img width="100px" src="/images/logo.png" alt="logo"></a>
       <ul class="left hide-on-med-and-down sidenav sidenav-fixed" id="slide-out" >
         <li class=""><a href="/menu">Menu</a></li>
@@ -12,6 +12,34 @@
     </div>
 
   </nav> 
+
+
+
+  <div class="contenedor menu-color">
+    <div class="row ">
+      {{#each data as  |platillo|}}
+      <div class="column ">
+        <div class="col s12 m6">
+          <div class="card medium">
+            <div class="card-image">
+              <img class="responsive-img"
+                src="{{photo}}" alt="{{nombre}}">
+              <span class="card-title black-text lista-inventario-2">{{nombre}}</span>
+            </div>
+            <div class="card-content ">
+              <p>{{descripcion}}</p>
+              
+            </div>
+            <div class="card-action">
+              <p>Costo: {{costo}}</p>
+              <p>Cantidad: {{cantidad}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      {{/each}}
+    </div>
+  </div>
 
 
  <div class="contenedor-imagen-menu-comida responsive-img col s12 m1">
@@ -56,32 +84,4 @@
 </form>
 
 </div>
-
-  <div class="contenedor menu-color">
-    <div class="row ">
-      {{#each data as  |platillo|}}
-      <div class="column ">
-        <div class="col s12 m6">
-          <div class="card medium">
-            <div class="card-image">
-              <img class="responsive-img"
-                src="{{photo}}" alt="{{nombre}}">
-              <span class="card-title black-text">{{nombre}}</span>
-            </div>
-            <div class="card-content">
-              <p>{{descripcion}}</p>
-              
-            </div>
-            <div class="card-action">
-              <p>Costo: {{costo}}</p>
-              <p>Cantidad: {{cantidad}}</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      {{/each}}
-    </div>
-  </div>
-
-
 

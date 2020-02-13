@@ -1,5 +1,5 @@
   <nav>
-    <div class="nav-wrapper deep-orange darken-1">
+    <div class="nav-wrapper color-nav">
       <a href="/" class="brand-logo center"><img width="100px" src="/images/logo.png" alt="logo"></a>
       <ul id="nav-mobile" class="left hide-on-med-and-down">
         <li><a href="/menu">Menu</a></li>
@@ -12,16 +12,16 @@
 
   <div class="black-text contenedor-imagen-menu-inventario responsive-img col s6 m6 l12">
 
-    <table class="centered  highlight  responsive-table">
+    <table class="centered  highlight  responsive-table ">
 
       <thead>
-        <tr>
+        <tr class=" lista-inventario">
           <th>Nombre</th>
           <th>Cantidad</th>
           <th>Costo</th>
         </tr>
       </thead>
-      <tbody>
+      <tbody class="orange lighten-2">
         {{#each platos}}
         <tr>
           <td>{{nombre}}</td>
