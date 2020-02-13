@@ -9,6 +9,6 @@ exports.creaOrden=async (req,res)=>{
   }
 
 exports.creaOrden=async (req,res) => {
-const ordenesStatus=await Ordenes.find()
+const ordenesStatus=await Ordenes.find().populate({User})
 res.render("statuspedido",{ordenesStatus})
 }
