@@ -1,40 +1,43 @@
+<h1>Menu</h1>
 
-<nav class="blue">
-      <div class="nav-wrapper">
-        <a class="brand-logo">Iron-Restaurant </a>
-        <ul id="nav-mobile" class="right hide-on-med-and-down">
-          <li> <a href="/aumentaInventario">Edit</a> </li>
-          <li><a href="/admin"> Ir a Admin</a></li>
-          <li><a href="/inventario">Crear un Platillo</a></li>
-          <li><a href="/statuspedido">Esatus del Platillo</a></li>
-        </ul>
-      </div>
-  </nav>
-<div class=" col s12">
-
-  <div class="black-text contenedor-imagen-menu responsive-img col s12">
- 
-    
-    {{#each data as  | platillo|}}
+  <div class="contenedor-imagen-menu responsive-img col s12">
     <div class="row">
+      {{#each data as  |platillo|}}
       <div class="column">
         <div class="col s12 m6">
           <div class="card medium">
             <div class="card-image">
-               <img src="{{photo}}" alt="{{nombre}}"> 
-               <span class="black-text card-title"> <h4>{{nombre}}</h4></span>
+              <img
+                src="{{photo}}" alt="{{nombre}}">
+              <span class="card-title black-text">{{nombre}}</span>
             </div>
             <div class="card-content">
               <p>{{descripcion}}</p>
-            </div>
-
-            <div class="card-action">
               <p>Costo: {{costo}}</p>
               <p>Cantidad: {{cantidad}}</p>
+            </div>
+            <div class="card-action">
+              <a href="#">This is a link</a>
             </div>
           </div>
         </div>
       </div>
-    {{/each}}
-
+      {{/each}}
+    </div>
+  </div>
+  <div>
+    <form action="/crearOrden" method="POST">
+    <h3>Ingresa una orden</h3>
+    <div class="input-field col s12">
+      <select class="browser-default" name="platillo" >
+        <option value="">Selecciona un platillo</option>
+        {{#each data}}
+          <option value="{{_id}}">{{nombre}}</option>
+        {{/each}}
+      </select>
+    </div>
+    <input type="number" name="cantidad" placeholder="#-cantidad">
+    <input type="number" name="mesa" placeholder="No. mesa">
+    <button>Ordenar</button>
+    </form>
   </div>

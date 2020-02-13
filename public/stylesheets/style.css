@@ -74,4 +74,11 @@ a {
 .logo > img {
   vertical-align: middle; }
 
+#imgbienv {
+  display: flex;
+  margin: auto; }
+
+#bbienv {
+  margin: 0 42vw; }
+
 /*# sourceMappingURL=style.css.map */

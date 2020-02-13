@@ -1,53 +1,69 @@
-<body>
-<nav class="blue">
-      <div class="nav-wrapper">
-        <a class="brand-logo">Iron-Restaurant </a>
-        <ul id="nav-mobile" class="right hide-on-med-and-down">
-          <li><a href="/menu"> Ir a Menu</a></li>
-          <li><a href="/admin"> Ir a Admin</a></li>
-          <li><a href="/inventario">Crear un Platillo</a></li>
-          <li><a href="/statuspedido">Ordenes</a></li>
-        </ul>
+<div>
+  <table>
+    <thead>
+      <tr>
+          <th>Nombre</th>
+          <th>Cantidad</th>
+          <th>Costo</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each platos}}
+        <tr>
+          <td>{{nombre}}</td>
+          <td>{{cantidad}}/40</td>
+          <td>${{costo}}</td>
+        </tr>
+      {{/each}}   
+    </tbody>
+  </table>
+  
+</div>
+
+<div>
+  <div id="surtir">
+    <form action="/aumentarInventario" method="POST">
+    <div class="input-field col s12">
+      <select class="browser-default" name="platillo" >
+        <option value="">Selecciona un platillo</option>
+        {{#each platos}}
+          <option value="{{_id}}">{{nombre}}</option>
+        {{/each}}
+      </select>
       </div>
-    </nav>
-  </div>  
-<div  id ="inventario-margen" class="row s4">
+     <input type="number" name="extra" placeholder="Cantidad">
+     <button class="btn waves-effect waves-light deep-orange darken-1" type="submit" name="action">Surtir
+    <i class="material-icons right">send</i>
+  </button>
+    </form>
+  </div>
+  <div id="crear">
+    <form action="/crearPlatillo" method="POST">
+      <input type="text" name="nombre" placeholder="Nombre">
+      <input type="text" name="descripcion" placeholder="Descripcion">
+      <input type="number" name="costo" placeholder="Costo">
+      <p>foto</p>
+      <input type="number" name="cantidad" placeholder="Cantidad">
+      <button class="btn waves-effect waves-light deep-orange darken-1" type="submit" name="action">Crear Platillo
+    <i class="material-icons right">add_circle_outline</i>
+  </button>
+    </form>
+  </div>
 
-
- <div class="contenedor-inventario responsive-img ">
-
-    <div id="surtir">
-      <form action="/aumentarInventario" method="POST" id="inventario">
-        <h3 class="black-text"> Inventario </h3>
-
-        <input type="text" name="nombre" class="black-text" placeholder="stocks">
-        <button class="center-align orange accent-4 btn waves-effect waves-light">Surtir <i
-            class="material-icons right">room_service</i> </button>
-
-      </form>
-
-
-      <div id="crear">
-        <form action="/crearPlatillo" method="POST" id="inventario">
-          <h3 class="black-text"> Crear Platillo </h3>
-          <input type="text" name="nombre" placeholder="Nombre">
-          <input type="text" name="descripcion" placeholder="Descripcion">
-          <input type="number" name="costo" placeholder="Costo">
-          <p>foto</p>
-          <input type="number" name="cantidad" placeholder="Cantidad" max="40" min="5">
-          <button type="submit"  class="orange accent-4 btn waves-effect waves-light">Crear <i
-              class="material-icons right">room_service</i> </button>
-        </form>
+  <div id="eliminar"> 
+    <form action="/borrarPlatillo" method="POST">
+      <div class="input-field col s12">
+      <select class="browser-default" name="platilloBorra" >
+        <option value="">Selecciona un platillo</option>
+        {{#each platos}}
+          <option value="{{_id}}">{{nombre}}</option>
+        {{/each}}
+      </select>
       </div>
+           <button class="btn waves-effect waves-light deep-orange darken-1" type="submit" name="action">Borrar Platillo
+    <i class="material-icons right">highlight_off</i>
+  </button>
+     </form>
+  </div>
+</div>
 
-    </div>
-
-
-    <div id="eliminar">
-      <form action="/borraPlatillo" method="POST" id="inventario">
-        <h3 class="black-text"> Eliminar platillo </h3>
-        <input type="text" name="nombre" placeholder="Nombre">
-        <button type="submit" class="orange accent-4 btn waves-effect waves-light">Eliminar<i class="material-icons right">close</i>
-        </button>
-      </form>
-    </div>

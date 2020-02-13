@@ -1,8 +1,12 @@
 const { model, Schema } = require("mongoose");
 const userSchema = new Schema(
   {   
-    idMesero:String,
-    idPlatillo:String,
+    idMesero:{
+      type:Schema.Types.ObjectId,
+      ref:'User'},
+    idPlatillo:{
+      type:Schema.Types.ObjectId,
+      ref:'Plate'},
     mesa: Number,
     cantidad: { type: Number, min: 1, max: 5},
     total:Number

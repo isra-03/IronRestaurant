@@ -1,13 +1,26 @@
+  <nav>
+    <div class="nav-wrapper deep-orange darken-1">
+      <a href="/" class="brand-logo center"><img width="100px" src="/images/logo.png" alt="logo"></a>
+      <ul id="nav-mobile" class="left hide-on-med-and-down">
+        <li><a href="/menu">Menu</a></li>
+        <li><a href="/inventario">Inventario</a></li>
+        <li><a href="/statuspedido">Estatus</a></li>
+      </ul>
+    </div>
+  </nav>
+ADMIN
+
+<a href="/logout">Logout</a>
+
 <body>
   <div class=" col s12">
     <nav class="blue">
       <div class="nav-wrapper">
-        <a class="brand-logo"> Admin </a>
+        <a class="brand-logo">Iron-Restaurant </a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
-          <a class="red" href="/logout">Logout</a>
           <li><a href="/menu"> Menu</a></li>
           <li><a href="/empleados">Empleados</a></li>
-          <li><a href="/statuspedido">Estatus Pedido</a></li>
+          <li><a href="/statuspedido">Ordenes</a></li>
         </ul>
       </div>
     </nav>
@@ -19,18 +32,10 @@
         <span>
           <h4>User name</h4> <i class="large material-icons">face</i>
           <h4>Status</h4> <i class="large material-icons">query_builder</i>
+        </span>
 
-
-    <ul class="collection with-header black-text">
-        <li class="collection-header "><h4>Platillos</h4></li>
-        {{#each data as  | platillo|}}  
-        <li class="collection-item black-text"><div>{{nombre}}<a href="#!" class="secondary-content"><i class="orange accent-4  material-icons">send</i></a></div></li>
-        {{/each}}
-   </ul>
-            
-
-
-
-    
-
-    </body>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
