@@ -70,7 +70,7 @@ app.locals.title = 'Express - Generated with IronGenerator';
 
 const index = require('./routes/index');
 app.use('/', index);
-app.use('/',isLoggedIn, isActive, isAdmin, require('./routes/adminRoutes'));
+app.use('/', require('./routes/adminRoutes'));
 app.use('/',isLoggedIn, isActive, require('./routes/loggedRoutes'));
 
 //app.use('/signup', require('./routes/index'))
