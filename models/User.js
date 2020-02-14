@@ -4,19 +4,23 @@ const PLM = require("passport-local-mongoose");
 
 const userSchema = new Schema(
   { 
-    username: {
+    username: String,
+    status:{
       type: String,
-      required: true
+      enum: ["Pending Confirmation", "Active"],
+      default: "Pending Confirmation"
     },
-    //Status: {
-    //  enum: ["Activo", "Inactivo"],
-    //  default: "Activo"
-    //},
-    Rol: {
+    confirmationCode:{
+      unique: true, 
+      type: String,
+    },
+    email: String,
+ 
+    Rol:{
       type: String,
       enum: ["USER", "ADMIN"],
       default: "USER"
-    }
+    },
   },
   {
     timestamps: true
@@ -24,6 +28,6 @@ const userSchema = new Schema(
 );
 
 
-userSchema.plugin(PLM, { usernameField: "username" });
+userSchema.plugin(PLM, { usernameField: "email" });
 
 module.exports = model("User", userSchema);

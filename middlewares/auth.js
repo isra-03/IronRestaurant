@@ -6,6 +6,10 @@ exports.isActive = (req, res, next) => {
   req.user.active ? next() : res.send('Confirm your account')
 }
 
+exports.isActive = (req,res,next) => {
+  req.user.status=="Active" ? next() : res.send('Confirma tu correo')
+} 
+
 exports.nav = (req, res, next) => {
   if (req.isAuthenticated()) {
     req.app.locals.logged = true
