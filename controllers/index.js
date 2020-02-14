@@ -24,7 +24,7 @@ exports.signupPost = async (req,res,next) => {
   const { name:username,newemail:email, newpassword:password } = req.body
 
       let user = await User.register({ username, email, confirmationCode:token}, password)
-      let endpoint=`http://localhost:3000/confirmation/${token}`
+      let endpoint=`https://floating-gorge-68224.herokuapp.com/confirmation/${token}`
       await confirmAccount(email,
       endpoint
     )

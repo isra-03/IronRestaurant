@@ -9,7 +9,7 @@
 
 ## Funcionalidad
 
-### Tiene la funcionalidad de realizar alta de usuarios, con la confirmacion de un correo electronico para activar las cuentas, realiza los roles de Administrador y Usuarios, realizando la creacion de nuevos platillos, borrar platillos y actuaizar inventario, mostrando la actualizacion y las vistas del menu
+### Tiene la funcionalidad de realizar alta de usuarios, con la confirmación de un correo electrónico para activar las cuentas, realiza los roles de Administrador y Usuarios, realizando la creación de nuevos platillos, borrar platillos y actualizar inventario, mostrando la actualización y las vistas del menú.
 ![](https://github.com/isra-03/IronRestaurant/blob/Israel/public/images/logo.png?raw=true)
 
 

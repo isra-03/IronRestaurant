@@ -10,7 +10,7 @@ const logger       = require('morgan');
 const path         = require('path');
 const passport = require("./config/passport");
 const session = require("express-session");
-
+const { isLoggedIn, isActive, isAdmin } = require('./middlewares/auth')
 
 mongoose
   .connect(process.env.DB, {useNewUrlParser: true, useUnifiedTopology: true })
@@ -70,8 +70,8 @@ app.locals.title = 'Express - Generated with IronGenerator';
 
 const index = require('./routes/index');
 app.use('/', index);
-app.use('/', require('./routes/adminRoutes'));
-app.use('/', require('./routes/loggedRoutes'));
+app.use('/',isLoggedIn, isActive, isAdmin, require('./routes/adminRoutes'));
+app.use('/',isLoggedIn, isActive, require('./routes/loggedRoutes'));
 
 //app.use('/signup', require('./routes/index'))
 //

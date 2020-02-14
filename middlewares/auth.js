@@ -16,7 +16,7 @@ exports.nav = (req, res, next) => {
 }
 
 exports.isAdmin = (req, res, next) => {
-  if (req.isAuthenticated() && req.user.role === "ADMIN") {
+  if (req.isAuthenticated() && req.user.Rol === "ADMIN") {
     next();
   } else {
     res.redirect("/");
