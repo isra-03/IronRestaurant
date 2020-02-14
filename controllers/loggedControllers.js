@@ -10,6 +10,6 @@ exports.creaOrden=async (req,res)=>{
 
 exports.statusOrden=async (req,res) => {
 const ordenesStatus=await Ordenes.find().populate("idMesero").populate("idPlatillo")
-console.log(ordenesStatus)
+
 res.render("statuspedido",{ordenesStatus})
 }

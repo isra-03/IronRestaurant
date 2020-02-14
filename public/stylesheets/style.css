@@ -22,7 +22,7 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url("https://github.com/isra-03/IronRestaurant/blob/dev/public/images/sobremesa-madera-encendido-fondo-pared-ventana-cristal-falta-definicion_38810-5372.jpg?raw=true");
+  background-image: url("../images/sobremesa.jpg");
   background-repeat: no-repeat;
   background-size: cover; }
 
