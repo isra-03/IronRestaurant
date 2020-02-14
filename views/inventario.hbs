@@ -1,15 +1,18 @@
   <nav>
-    <div class="nav-wrapper color-nav">
+    <div class="nav-wrapper color-nav deep-orange darken-1">
       <a href="/" class="brand-logo center"><img width="100px" src="/images/logo.png" alt="logo"></a>
       <ul id="nav-mobile" class="left hide-on-med-and-down">
         <li><a href="/menu">Menu</a></li>
-        <li> <a href="/admin"> Perfil admin </a> </li>
+        <li> <a href="/admin"> Perfil Gerente </a> </li>
         <li><a href="/inventario">Inventario</a></li>
         <li><a href="/statuspedido">Estatus</a></li>
+        <li> <a href="/logout">Logout</a></li>
       </ul>
     </div>
   </nav>
-
+<br>
+<br>
+<h5>Resumen Inventario</h5>
   <div class="black-text contenedor-imagen-menu-inventario responsive-img col s6 m6 l12">
 
     <table class="centered  highlight  responsive-table ">
@@ -37,7 +40,7 @@
     <div class='row login centered'>
 
       <div id="surtir" class='input-field col s12'>
-        <h3 class="centered ">Resurtir menu </h3>
+        <h3 class="centered ">Resurtir Inventario </h3>
         <form action="/aumentarInventario" method="POST">
           <div class="input-field col s12">
             <select class="browser-default" name="platillo">
@@ -59,7 +62,7 @@
 
 
       <div id="crear" class='input-field col s12'>
-        <h3 class="centered ">Crear </h3>
+        <h3 class="centered ">Crear Platillo</h3>
         <form action="/crearPlatillo" method="POST">
           <div class='input-field col s12'>
             <input type="text" name="nombre" placeholder="Nombre">
@@ -86,7 +89,7 @@
 
 
       <div id="eliminar" class='centered input-field col s12'>
-        <h4>Eliminar</h4>
+        <h4>Eliminar Platillo</h4>
         <form action="/borrarPlatillo" method="POST">
           <div class="input-field ">
             <select class="browser-default col s12" name="platilloBorra">
