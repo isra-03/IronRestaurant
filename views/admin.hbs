@@ -1,41 +1,62 @@
-  <nav>
-    <div class="nav-wrapper deep-orange darken-1">
-      <a href="/" class="brand-logo center"><img width="100px" src="/images/logo.png" alt="logo"></a>
-      <ul id="nav-mobile" class="left hide-on-med-and-down">
-        <li><a href="/menu">Menu</a></li>
-        <li><a href="/inventario">Inventario</a></li>
-        <li><a href="/statuspedido">Estatus</a></li>
-      </ul>
-    </div>
-  </nav>
+ <body>
 
-
-<a href="/logout">Logout</a>
-
-<body>
   <div class=" col s12">
-    <nav class="blue">
+    <nav class="nav-wrapper color-nav">
       <div class="nav-wrapper">
-        <a class="brand-logo">Iron-Restaurant </a>
-        <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <a href="/" class="brand-logo center"><img width="100px" src="/images/logo.png" alt="logo"></a>
+      <ul id="nav-mobile" class="left hide-on-med-and-down">
           <li><a href="/menu"> Menu</a></li>
-          <li><a href="/empleados">Empleados</a></li>
-          <li><a href="/statuspedido">Ordenes</a></li>
+          <li><a href="/inventario">Inventario</a></li>
+          <li><a href="/statuspedido">Estatus</a></li>
+          <li> <a class="red" href="/logout">Logout</a></li>
         </ul>
       </div>
     </nav>
   </div>
-  <div class="colums ">
-  <div class="col s12 m6">
-    <div class="card blue-grey darken-1">
-      <div class="card-content white-text">
+
+  <div class="colums  ">
+  <div class="col s6 m6 l12 ">
+    <div class="card ">
+      <div class="card-content black-text menu-color">
         <span>
-          <h4>User name</h4> <i class="large material-icons">face</i>
-          <h4>Status</h4> <i class="large material-icons">query_builder</i>
+          <div>
+            <p>Hello Sr. Armin</p>
+
+         
+          <table class="centered highlight">
+        <thead>
+          <tr>
+              <th> <h6> Mesero</h6> <i class="large material-icons">face </i></th>
+              <th><h6>Status</h6> <i class="large material-icons">query_builder </i></th>
+              <th><h6>Estado del Mesero</h6> <i class="large material-icons"> directions_run </i> </th> 
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr class="pendiente">
+            <td>Lucas</td>
+            <td >Pendiente</td>
+            <td>Tuerno Matutino</td>
+          </tr>
+          <tr class="entregado">
+            <td >Manuel</td>
+            <td >Entregado</td>
+            <td >Turno Matutino</td>
+          </tr>
+          <tr class="encamino">
+            <td >Jonathan</td>
+            <td >En camino</td>
+            <td>Turno Matutino</td>
+          </tr>
+        </tbody>
+      </table>
+           
+          
         </span>
 
       </div>
     </div>
   </div>
 </div>
+
 </body>

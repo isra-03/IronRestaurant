@@ -45,4 +45,3 @@ exports.loginPost=(req,res)=>{
 exports.adminGet=(req,res)=>{
   res.render("admin")
 }
-

@@ -1,10 +1,20 @@
 body {
   padding: 0;
   margin: 0;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif; }
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background: rgba(255, 105, 46, 0.5); }
 
 a {
   color: #00B7FF; }
+
+.color-nav {
+  background: #ec1c24; }
+
+.form-inventario {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column; }
 
 .contenedor-imagen {
   width: 100%;
@@ -13,6 +23,18 @@ a {
   align-items: center;
   justify-content: center;
   background-image: url("https://img.freepik.com/vector-gratis/fondo-madera-realista_107791-102.jpg?size=626&ext=jpg");
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+.contenedor-inventario {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  background-image: url("https://d2skenm2jauoc1.cloudfront.net/assets/gloriafood/img/redesign/mobile-only/homepage-hero-mobile-33cfa67eb9.jpg");
   background-repeat: no-repeat;
   background-size: cover; }
 
@@ -27,9 +49,67 @@ a {
   background-repeat: no-repeat;
   background-size: cover; }
 
-form {
+.contenedor-imagen-menu-inventario {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: s;
+  flex-wrap: wrap;
+  background: #FCF0F2;
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+.contenedor-imagen-menu-comida {
+  width: 100%;
+  height: 200%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+.contenedor-imagen-menu-comida-2 {
+  width: 100%;
+  height: 200%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  background: #FCF0F2; }
+
+.menu-color {
+  background: #FCF0F2; }
+
+.pendiente {
+  background: rgba(255, 32, 32, 0.5); }
+
+.entregado {
+  background: rgba(33, 230, 26, 0.5); }
+
+.encamino {
+  background: rgba(248, 244, 26, 0.5); }
+
+.lista-inventario {
+  background: rgba(255, 105, 46, 0.8); }
+
+.lista-inventario-2 {
+  background: rgba(255, 105, 46, 0.5); }
+
+#inventario-margen {
+  width: 100%;
+  height: 100%;
+  margin: 0; }
+
+#form-index {
   width: 100vw;
   height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column; }
+
+#inventario {
   display: flex;
   align-items: center;
   justify-content: center;

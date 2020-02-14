@@ -20,25 +20,25 @@
               <img
                 src="{{idPlatillo.photo}}" alt="{{nombre}}">
               <span class="card-title green-text  .textUpCard">{{nombre}}</span>
-            </div>
+              </div>
             <div class="card-content">
-              <p>Nombre{{idPlatillo.nombre}}</p>
+              <p>{{idPlatillo.nombre}}</p>
               <p>Mesero: {{idMesero.username}}</p>
               <p>Mesa: {{mesa}}</p>
               <p>Cantidad: {{cantidad}}</p>
+              </div>
+            <div class="input-field col s12">
+            <select class="browser-default">
+            <option value="" disabled selected>Selecciona el Estatus</option>
+            <option value="1">Pendiente</option>
+            <option value="2">Entregado</option>
+            </select>
             </div>
-             <div class="input-field col s12">
-    <select class="browser-default">
-      <option value="" disabled selected>Selecciona el Estatus</option>
-      <option value="1">Pendiente</option>
-      <option value="2">Terminado</option>
-          </select>
-  </div>
             </div>
           </div>
         </div>
-      </div>
       {{/each}}
+      </div>
     </div>
   </div>
   <div>

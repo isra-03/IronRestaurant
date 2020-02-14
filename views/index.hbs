@@ -1,52 +1,107 @@
 <title>IronRestaurant</title>
 <body>
 <div id ="imagen-fondo"class="contenedor-imagen responsive-img col s12">
-    <form class="col s12 " method="post">
+    <form id="form-index" class="col s12 " method="POST" action="/login">
         <div class='row'>
-          <div class='col s12'>
-          </div>
+          <div class='col s12'></div>
+
         </div>
-        <h2 class="black-text ">Welcome</h5>
-        <h3 class="black-text ">Login</h3>
+          <h2 class="black-text"> Welcome</h2>
+          <h3 class="black-text ">Log in</h3>
         <div class='row login'>
+     
           <div class='input-field col s12'>
             <input class=' black-text' type='email' name='email' id='email' required />
-            <label class="black-text" for='email'>Enter your email</label>
+            <label class="black-text">Enter your email</label>
           </div>
         </div>
-
-
-
-
 </section>
         <div class='row login'>
           <div class='input-field col s12'>
-            <input class='' type='password' name='password' id='password'required />
-            <label class="black-text" for='password' >Password</label>
+            <input  type='password' name='password' required />
+            <label class="black-text" >Password</label>
           </div>
         </div>
 
         <br />
         <center>
           <div class='row login'>
-            <button type="submit" value="Login" name='btn_login' class='col s12 btn btn-large waves-effect indigo'>Ingresar</button>
+          <button class="waves-effect waves-light btn-large deep-orange darken-1" type="submit"  value="Login">Ingresar  </button>
           </div>
-          <a class="red-text" href="/signup">Create account</a>
-        </center>
+          <a id="bbienv" href="/signup" class="waves-effect waves-light btn-large deep-orange darken-1"><i class="material-icons left">account_circle</i>Crear Cuenta</a>
+
+           </center>
         
       </form>
 </div>
        
 </body>
 
-
+{{!-- 
   <form action="/login" method="POST">
     <h2>Log in</h2>
     <label>Email</label>
-    <input type="email" name="email" placeholder="correo@dominio0.com" required>
+    <input type="email" name="email" placeholder="correo@dominio0.com" id="email" required>
     <label>Password</label>
     <input type="password" name="password" required>
     <input class="waves-effect waves-light btn-large deep-orange darken-1" type="submit"  value="Login">
   </form>
 
-  <a id="bbienv" href="/signup" class="waves-effect waves-light btn-large deep-orange darken-1"><i class="material-icons left">account_circle</i>Crear Cuenta</a>
+  <a id="bbienv" href="/signup" class="waves-effect waves-light btn-large deep-orange darken-1"><i class="material-icons left">account_circle</i>Crear Cuenta</a> --}}
+
+
+
+{{!-- <title>IronRestaurant</title> --}}
+{{!-- <body> --}}
+  {{!-- <div id="imagen-fondo" class="contenedor-imagen responsive-img col s12"> --}}
+    {{!-- <form id="form-index" class="col s12 " method="POST" action="/login"> --}}
+      {{!-- <div class='row'> --}}
+        {{!-- <div class='col s12'></div> --}}
+      {{!-- </div> --}}
+      {{!-- <h3 class="black-text ">Welcome</h3> --}}
+        {{!-- <h3 class="black-text ">Login</h3> --}}
+        {{!-- <div class='row login'> --}}
+          {{!-- <div class='input-field col s12'> --}}
+            {{!-- <input class=' black-text' type='email' name='email' placeholder="correo@dominio0.com" required /> --}}
+            {{!-- <label class="black-text">Enter your email</label> --}}
+          {{!-- </div> --}}
+          {{!-- <div class='input-field col s12'> --}}
+            {{!-- <input class=' black-text' type='password' name='password' placeholder="password" required /> --}}
+            {{!-- <label class="black-text">Password</label> --}}
+          {{!-- </div> --}}
+{{!--  --}}
+{{!--  --}}
+{{!--  --}}
+{{!-- </section> --}}
+        {{!-- <div class='row login'> --}}
+          {{!-- <div class='input-field col s12'> --}}
+            {{!-- <input class='' type='password' name='password' id='password'required /> --}}
+            {{!-- <label class="black-text" for='password' >Password</label> --}}
+          {{!-- </div> --}}
+        {{!-- </div> --}}
+{{!--  --}}
+        {{!-- <br /> --}}
+        {{!-- <center> --}}
+          {{!-- <div class='row login'> --}}
+            {{!-- <button type="submit" value="Login" name='btn_login' class='col s12 btn btn-large waves-effect indigo'>Ingresar</button> --}}
+          {{!-- </div> --}}
+          {{!-- <a class="red-text" href="/signup">Create account</a> --}}
+        {{!-- </center> --}}
+        {{!--  --}}
+      {{!-- </form> --}}
+{{!-- </div> --}}
+       {{!--  --}}
+{{!-- </body> --}}
+{{!--  --}}
+{{!--  --}}
+  {{!-- <form action="/login" method="POST"> --}}
+    {{!-- <h2>Log in</h2> --}}
+    {{!-- <label>Email</label> --}}
+    {{!-- <input type="email" name="email" placeholder="correo@dominio0.com" required> --}}
+    {{!-- <label>Password</label> --}}
+    {{!-- <input type="password" name="password" required> --}}
+    {{!-- <input class="waves-effect waves-light btn-large deep-orange darken-1" type="submit"  value="Login"> --}}
+  {{!-- </form> --}}
+{{!--  --}}
+  {{!-- <a id="bbienv" href="/signup" class="waves-effect waves-light btn-large deep-orange darken-1"><i class="material-icons left">account_circle</i>Crear Cuenta</a> --}}
+{{!--  --}}

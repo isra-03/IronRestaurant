@@ -34,4 +34,3 @@ const data= await Platillos.find()
 res.render("menu",{data})
 
 }
-
