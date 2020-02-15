@@ -7,7 +7,7 @@ const userSchema = new Schema(
     },
     descripcion: {
       type: String,
-      required: true
+      //required: true
     },
     costo: {
       type: Number
