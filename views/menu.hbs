@@ -1,18 +1,20 @@
-
+<h1>Menu</h1>
 
   <div class="contenedor-imagen-menu responsive-img col s12">
     <div class="row">
+      {{#each data as  |platillo|}}
       <div class="column">
         <div class="col s12 m6">
           <div class="card medium">
             <div class="card-image">
               <img
-                src="https://ichef.bbci.co.uk/news/410/cpsprodpb/134E3/production/_105057097_a226d870-cc5f-4043-9f4b-d452b75cc280.jpg">
-              <span class="card-title">Card Title</span>
+                src="{{photo}}" alt="{{nombre}}">
+              <span class="card-title black-text">{{nombre}}</span>
             </div>
             <div class="card-content">
-              <p>I am a very simple card. I am good at containing small bits of information.
-                I am convenient because I require little markup to use effectively.</p>
+              <p>{{descripcion}}</p>
+              <p>Costo: {{costo}}</p>
+              <p>Cantidad: {{cantidad}}</p>
             </div>
             <div class="card-action">
               <a href="#">This is a link</a>
@@ -20,80 +22,22 @@
           </div>
         </div>
       </div>
-
-      <div class="column">
-        <div class="col s12 m6">
-          <div class="card medium">
-            <div class="card-image">
-              <img
-                src="https://ichef.bbci.co.uk/news/410/cpsprodpb/134E3/production/_105057097_a226d870-cc5f-4043-9f4b-d452b75cc280.jpg">
-              <span class="card-title">Card Title</span>
-            </div>
-            <div class="card-content">
-              <p>I am a very simple card. I am good at containing small bits of information.
-                I am convenient because I require little markup to use effectively.</p>
-            </div>
-            <div class="card-action">
-              <a href="#">This is a link</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="column">
-        <div class="col s12 m6">
-          <div class="card medium">
-            <div class="card-image">
-              <img
-                src="https://ichef.bbci.co.uk/news/410/cpsprodpb/134E3/production/_105057097_a226d870-cc5f-4043-9f4b-d452b75cc280.jpg">
-              <span class="card-title">Card Title</span>
-            </div>
-            <div class="card-content">
-              <p>I am a very simple card. I am good at containing small bits of information.
-                I am convenient because I require little markup to use effectively.</p>
-            </div>
-            <div class="card-action">
-              <a href="#">This is a link</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="column">
-        <div class="col s12 m6">
-          <div class="card medium">
-            <div class="card-image">
-              <img
-                src="https://ichef.bbci.co.uk/news/410/cpsprodpb/134E3/production/_105057097_a226d870-cc5f-4043-9f4b-d452b75cc280.jpg">
-              <span class="card-title">Card Title</span>
-            </div>
-            <div class="card-content">
-              <p>I am a very simple card. I am good at containing small bits of information.
-                I am convenient because I require little markup to use effectively.</p>
-            </div>
-            <div class="card-action">
-              <a href="#">This is a link</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-
+      {{/each}}
     </div>
-
-
-
   </div>
-
-
-Menu
-{{#each data as  |platillo|}}
   <div>
-    <img src="{{photo}}" alt="{{nombre}}">
-    <h4>{{nombre}}</h4>
-    <p>{{descripcion}}</p>
-    <p>Costo: {{costo}}</p>
-    <p>Cantidad: {{cantidad}}</p>
+    <form action="/crearOrden" method="POST">
+    <h3>Ingresa una orden</h3>
+    <div class="input-field col s12">
+      <select class="browser-default" name="platillo" >
+        <option value="">Selecciona un platillo</option>
+        {{#each data}}
+          <option value="{{_id}}">{{nombre}}</option>
+        {{/each}}
+      </select>
+    </div>
+    <input type="number" name="cantidad" placeholder="#-cantidad">
+    <input type="number" name="mesa" placeholder="No. mesa">
+    <button>Ordenar</button>
+    </form>
   </div>
-{{/each}}
-<h1>Menu</h1>

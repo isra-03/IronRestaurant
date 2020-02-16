@@ -15,7 +15,7 @@ const userSchema = new Schema(
     photo: {
       type: String,
       default:
-        "../public/images/defaultPlatillo.jpg"
+        "/images/defaultPlatillo.jpg"
     },
     cantidad: { type: Number, min: 5, max: 40, required: true }
   }

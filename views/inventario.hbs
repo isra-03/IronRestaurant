@@ -1,9 +1,40 @@
+<div>
+  <table>
+    <thead>
+      <tr>
+          <th>Nombre</th>
+          <th>Cantidad</th>
+          <th>Costo</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each platos}}
+        <tr>
+          <td>{{nombre}}</td>
+          <td>{{cantidad}}/40</td>
+          <td>${{costo}}</td>
+        </tr>
+      {{/each}}   
+    </tbody>
+  </table>
+  
+</div>
 
 <div>
   <div id="surtir">
     <form action="/aumentarInventario" method="POST">
-    <input type="text" name="nombre">
-    <button>Surtir</button>
+    <div class="input-field col s12">
+      <select class="browser-default" name="platillo" >
+        <option value="">Selecciona un platillo</option>
+        {{#each platos}}
+          <option value="{{_id}}">{{nombre}}</option>
+        {{/each}}
+      </select>
+      </div>
+     <input type="number" name="extra" placeholder="Cantidad">
+     <button class="btn waves-effect waves-light deep-orange darken-1" type="submit" name="action">Surtir
+    <i class="material-icons right">send</i>
+  </button>
     </form>
   </div>
   <div id="crear">
@@ -13,10 +44,26 @@
       <input type="number" name="costo" placeholder="Costo">
       <p>foto</p>
       <input type="number" name="cantidad" placeholder="Cantidad">
-      <button>Crear</button>
+      <button class="btn waves-effect waves-light deep-orange darken-1" type="submit" name="action">Crear Platillo
+    <i class="material-icons right">add_circle_outline</i>
+  </button>
     </form>
   </div>
+
   <div id="eliminar"> 
-    
+    <form action="/borrarPlatillo" method="POST">
+      <div class="input-field col s12">
+      <select class="browser-default" name="platilloBorra" >
+        <option value="">Selecciona un platillo</option>
+        {{#each platos}}
+          <option value="{{_id}}">{{nombre}}</option>
+        {{/each}}
+      </select>
+      </div>
+           <button class="btn waves-effect waves-light deep-orange darken-1" type="submit" name="action">Borrar Platillo
+    <i class="material-icons right">highlight_off</i>
+  </button>
+     </form>
   </div>
 </div>
+
